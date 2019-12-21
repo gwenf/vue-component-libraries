@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <b-container>
     <PetTable
       species="cats"
       :pets="cats"
     />
-  </div>
+  </b-container>
 </template>
 
 <script>

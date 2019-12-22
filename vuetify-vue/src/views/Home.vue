@@ -1,10 +1,6 @@
 <template>
-  <div class="home-view-container">
-    <h1>Adopt a new best friend.</h1>
-    {{ getAllCats.length }}
-    {{ animalsCount }}
-
-    <button @click="togglePetForm" class="btn btn-primary">Add New Pet</button>
+  <div>
+    <v-btn>Add New Pet</v-btn>
 
     <b-form @submit.prevent="handleSubmit" v-if="showPetForm">
       <b-form-group id="exampleInputGroup2" label="Pet's Name:" label-for="exampleInput2">

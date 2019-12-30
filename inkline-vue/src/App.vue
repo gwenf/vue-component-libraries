@@ -1,10 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/cats">Cats</router-link> |
-      <router-link to="/dogs">Dogs</router-link> |
-    </div>
+    <i-navbar>
+    <i-navbar-brand :to="{ name: 'home' }">
+      Pet Store
+    </i-navbar-brand>
+      <i-navbar-items class="_justify-content-end">
+        <i-nav>
+          <i-nav-item :to="{ name: 'cats' }">Cats</i-nav-item>
+          <i-nav-item :to="{ name: 'dogs' }">Dogs</i-nav-item>
+        </i-nav>
+      </i-navbar-items>
+    </i-navbar>
+
     <i-container>
       <router-view/>
     </i-container>

@@ -4,34 +4,36 @@
     {{ getAllCats.length }}
     {{ animalsCount }}
 
-    <button @click="togglePetForm" class="btn btn-primary">Add New Pet</button>
+    <i-button @click="togglePetForm" class="btn btn-primary">
+      Add New Pet
+    </i-button>
 
-    <b-form @submit.prevent="handleSubmit" v-if="showPetForm">
-      <b-form-group id="exampleInputGroup2" label="Pet's Name:" label-for="exampleInput2">
-        <b-form-input
+    <i-form @submit.prevent="handleSubmit" v-if="showPetForm">
+      <i-form-group id="exampleInputGroup2" label="Pet's Name:" label-for="exampleInput2">
+        <i-form-input
           id="exampleInput2"
           type="text"
           v-model="formData.name"
           required
           placeholder="Enter name" />
-      </b-form-group>
+      </i-form-group>
 
-      <b-form-group id="exampleInputGroup3" label="Species:" label-for="exampleInput3">
-        <b-form-select id="exampleInput3" :options="['cats', 'dogs']" required v-model="formData.species" />
-      </b-form-group>
+      <i-form-group id="exampleInputGroup3" label="Species:" label-for="exampleInput3">
+        <i-form-select id="exampleInput3" :options="['cats', 'dogs']" required v-model="formData.species" />
+      </i-form-group>
 
-      <b-form-group id="exampleInputGroup2" label="Pet's Age:" label-for="exampleInput2">
-        <b-form-input
+      <i-form-group id="exampleInputGroup2" label="Pet's Age:" label-for="exampleInput2">
+        <i-form-input
           id="exampleInput2"
           type="number"
           v-model="formData.age"
           required
           placeholder="Enter age" />
-      </b-form-group>
+      </i-form-group>
 
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
-    </b-form>
+      <i-button type="submit" variant="primary">Submit</i-button>
+      <i-button type="reset" variant="danger">Reset</i-button>
+    </i-form>
   </div>
 </template>
 

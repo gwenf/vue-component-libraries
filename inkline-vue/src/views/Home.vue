@@ -1,12 +1,13 @@
 <template>
   <div class="home-view-container">
-    <h1>Adopt a new best friend.</h1>
-    {{ getAllCats.length }}
-    {{ animalsCount }}
+    <img class="image -fluid" src="@/assets/cat_dog.jpg" alt="Cat Dog cute image" />
 
-    <i-button @click="togglePetForm" class="btn btn-primary">
-      Add New Pet
-    </i-button>
+    <div class="hero-text">
+      <h1>Adopt a new best friend.</h1>
+      <i-button @click="togglePetForm" variant="primary">
+        Add New Pet
+      </i-button>
+    </div>
 
     <i-form @submit.prevent="handleSubmit" v-if="showPetForm">
       <i-form-group id="exampleInputGroup2" label="Pet's Name:" label-for="exampleInput2">

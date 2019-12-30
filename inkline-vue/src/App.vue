@@ -12,7 +12,7 @@
       </i-navbar-items>
     </i-navbar>
 
-    <i-container>
+    <i-container fluid>
       <router-view/>
     </i-container>
   </div>

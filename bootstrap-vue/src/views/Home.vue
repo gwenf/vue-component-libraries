@@ -2,7 +2,7 @@
   <div class="home-view-container">
     <img class="hero-image" src="@/assets/cat_dog.jpg" alt="Cat Dog cute image" />
 
-    <div class="header-info">
+    <div class="hero-text">
       <h1>Adopt a new best friend.</h1>
       <b-button variant="primary" v-b-modal.modal-1>
         Add New Pet

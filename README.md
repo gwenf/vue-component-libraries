@@ -10,7 +10,10 @@ This is still in the early stages and needs a lot more work.
 
 <img src="pet_table.png" alt="pet table mockup">
 
+<img src="pet_form.png" alt="pet form mockup">
+
+<img src="saved_pet.png" alt="pet saved success mockup">
+
 ## Project Specs
 
 *Coming soon...*
-

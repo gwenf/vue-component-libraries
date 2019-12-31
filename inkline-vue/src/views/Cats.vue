@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <PetTable
-      species="cats"
-      :pets="cats"
-    />
-  </div>
+  <i-row>
+    <i-column xs="12" sm="8" offset-sm="2">
+      <PetTable
+        species="cats"
+        :pets="cats"
+      />
+    </i-column>
+  </i-row>
 </template>
 
 <script>

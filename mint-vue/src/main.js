@@ -1,15 +1,14 @@
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
+import MintUI from 'mint-ui'
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'mint-ui/lib/style.css'
 import './assets/sass/index.sass'
 
 import App from './App.vue'
 import router from './router'
 import store from './store'
 
-Vue.use(BootstrapVue)
+Vue.use(MintUI)
 
 Vue.config.productionTip = false
 

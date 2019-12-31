@@ -14,6 +14,8 @@ This is still in the early stages and needs a lot more work.
 
 <img src="saved_pet.png" alt="pet saved success mockup">
 
+<img src="pet_info.png" alt="pet info mockup">
+
 ## Project Specs
 
 *Coming soon...*

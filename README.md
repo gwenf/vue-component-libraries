@@ -4,6 +4,13 @@ This repo was created from the [Vue Adopt Pets](https://github.com/gwenf/vue-ado
 
 This is still in the early stages and needs a lot more work.
 
+## Table of Contents
+
+1. [Project Details](#project-details)
+1. [Running Locally](#running-locally)
+1. [Mockups](#mockups)
+1. [Routes](#routes)
+
 ## Project Details
 
 Each folder in this repo represents a different UI component library for Vue.js.

@@ -1,37 +1,47 @@
 <template>
-  <i-form @submit.prevent="handleSubmit" v-if="showPetForm">
-    <i-form-group id="exampleInputGroup2" label="Pet's Name:" label-for="exampleInput2">
-      <i-input
-        id="exampleInput2"
-        type="text"
-        v-model="formData.name"
-        required
-        placeholder="Enter name"
-      />
-    </i-form-group>
+  <i-row class="pet-info-form-page">
+    <i-column xs="12" sm="6" offset-sm="3">
+      <div class="_text-left">
+        <h1>Find a Loving Home</h1>
+        <p>Enter your pet's info here.</p>
+      </div>
+      <i-form @submit.prevent="handleSubmit">
+        <i-form-group id="pet-name-group" label="Pet's Name:" label-for="pet-name">
+          <i-input
+            id="pet-name"
+            type="text"
+            v-model="formData.name"
+            required
+            placeholder="Enter name"
+          />
+        </i-form-group>
 
-    <i-form-group id="exampleInputGroup3" label="Species:" label-for="exampleInput3">
-      <i-select
-        id="exampleInput3"
-        :options="['cats', 'dogs']"
-        required
-        v-model="formData.species"
-      />
-    </i-form-group>
+        <i-form-group id="pet-type-group" label="Species:" label-for="pet-type">
+          <i-select
+            id="pet-type"
+            :options="['cats', 'dogs']"
+            required
+            v-model="formData.species"
+          />
+        </i-form-group>
 
-    <i-form-group id="exampleInputGroup2" label="Pet's Age:" label-for="exampleInput2">
-      <i-input
-        id="exampleInput2"
-        type="number"
-        v-model="formData.age"
-        required
-        placeholder="Enter age"
-      />
-    </i-form-group>
+        <i-form-group id="pet-age-group" label="Pet's Age:" label-for="pet-age">
+          <i-input
+            id="pet-age"
+            type="number"
+            v-model="formData.age"
+            required
+            placeholder="Enter age"
+          />
+        </i-form-group>
 
-    <i-button type="submit" variant="primary">Submit</i-button>
-    <i-button type="reset" variant="danger">Reset</i-button>
-  </i-form>
+        <div class="pet-form-button-group">
+          <i-button type="submit" variant="primary">Submit</i-button>
+          <i-button type="reset" link variant="danger">Reset</i-button>
+        </div>
+      </i-form>
+    </i-column>
+  </i-row>
 </template>
 
 <script>
@@ -39,7 +49,13 @@ import { mapActions } from 'vuex'
 
 export default {
   data() {
-    return {}
+    return {
+      formData: {
+        name: '',
+        age: 0,
+        species: null
+      }
+    }
   },
   methods: {
     ...mapActions([

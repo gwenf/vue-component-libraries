@@ -30,12 +30,7 @@ export default {
   name: 'home',
   data() {
     return {
-      showPetModal: false,
-      formData: {
-        name: '',
-        age: 0,
-        species: null
-      }
+      showPetModal: false
     }
   },
   computed: {

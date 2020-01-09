@@ -4,6 +4,18 @@ This repo was created from the [Vue Adopt Pets](https://github.com/gwenf/vue-ado
 
 This is still in the early stages and needs a lot more work.
 
+## Project Details
+
+Each folder in this repo represents a different UI component library for Vue.js.
+
+## Running Locally
+
+1. Clone this repo.
+1. Navigate into one of the directories in the parent folder (e.g. `cd inkline-vue/`).
+1. Install dependencies: `npm install`
+1. Run the Vue application: `npm run serve`
+1. Go to http://localhost:8080 in your browser to see the live application
+
 ## Mockups
 
 <img src="home_page.png" alt="home page mockup">
@@ -18,6 +30,4 @@ This is still in the early stages and needs a lot more work.
 
 <img src="pet_info.png" alt="pet info mockup">
 
-## Project Specs
-
-*Coming soon...*
+*apply for adoption section is coming soon*

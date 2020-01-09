@@ -4,7 +4,11 @@
 
     <div class="hero-text">
       <h1>Adopt a new best friend.</h1>
+
       <i-button @click="showPetForm = true" variant="primary">
+        Find a Pet
+      </i-button>
+      <i-button @click="$router.push('/enter-pet-info')" variant="primary">
         Add New Pet
       </i-button>
     </div>
@@ -12,51 +16,17 @@
     <i-modal variant="info" v-model="showPetForm">
       <template slot="header">Pet Information</template>
 
-      <i-form @submit.prevent="handleSubmit" v-if="showPetForm">
-        <i-form-group id="exampleInputGroup2" label="Pet's Name:" label-for="exampleInput2">
-          <i-input
-            id="exampleInput2"
-            type="text"
-            v-model="formData.name"
-            required
-            placeholder="Enter name"
-          />
-        </i-form-group>
-
-        <i-form-group id="exampleInputGroup3" label="Species:" label-for="exampleInput3">
-          <i-select
-            id="exampleInput3"
-            :options="['cats', 'dogs']"
-            required
-            v-model="formData.species"
-          />
-        </i-form-group>
-
-        <i-form-group id="exampleInputGroup2" label="Pet's Age:" label-for="exampleInput2">
-          <i-input
-            id="exampleInput2"
-            type="number"
-            v-model="formData.age"
-            required
-            placeholder="Enter age"
-          />
-        </i-form-group>
-
-        <i-button type="submit" variant="primary">Submit</i-button>
-        <i-button type="reset" variant="danger">Reset</i-button>
-      </i-form>
+      
     </i-modal>
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-
 export default {
   name: 'home',
   data() {
     return {
-      showPetForm: false,
+      showPetModal: false,
       formData: {
         name: '',
         age: 0,
@@ -64,36 +34,9 @@ export default {
       }
     }
   },
-  computed: {
-    ...mapGetters([
-      'animalsCount',
-      'getAllCats'
-    ])
-  },
   methods: {
-    ...mapActions([
-      'addPet'
-    ]),
-    togglePetForm() {
-      this.showPetForm = !this.showPetForm
-    },
-    handleSubmit() {
-      const { species, age, name } = this.formData
-      const payload = {
-        species,
-        pet: {
-          name,
-          age
-        }
-      }
-      this.addPet(payload)
-
-      // reset form after submit
-      this.formData = {
-        name: '',
-        age: 0,
-        species: null
-      }
+    togglePetModal() {
+      this.showPetModal = !this.showPetModal
     }
   }
 }

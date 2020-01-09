@@ -2,7 +2,7 @@
   <div id="app">
     <i-navbar>
     <i-navbar-brand :to="{ name: 'home' }">
-      Pet Store
+      Adopt a Pet
     </i-navbar-brand>
       <i-navbar-items class="_justify-content-end">
         <i-nav>

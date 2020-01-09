@@ -8,6 +8,8 @@ This is still in the early stages and needs a lot more work.
 
 <img src="home_page.png" alt="home page mockup">
 
+<img src="pet_type_modal.png" alt="pet type modal mockup">
+
 <img src="pet_table.png" alt="pet table mockup">
 
 <img src="pet_form.png" alt="pet form mockup">

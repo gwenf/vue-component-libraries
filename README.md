@@ -15,6 +15,15 @@ This is still in the early stages and needs a lot more work.
 
 Each folder in this repo represents a different UI component library for Vue.js.
 
+### List of UI component compared
+
+* Typography
+* Form Elements
+* Buttons
+* Modals
+* Toastr Notifications
+* Tables
+
 ## Running Locally
 
 1. Clone this repo.

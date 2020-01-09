@@ -4,24 +4,28 @@
 
     <div class="hero-text">
       <h1>Adopt a new best friend.</h1>
-
-      <i-button @click="showPetForm = true" variant="primary">
+      <p>{{ animalCount }} Furry Friends Available for Adoption</p>
+      <i-button @click="showPetModal = true" variant="primary">
         Find a Pet
       </i-button>
-      <i-button @click="$router.push('/enter-pet-info')" variant="primary">
+      <i-button @click="$router.push('/pet-form')" variant="primary">
         Add New Pet
       </i-button>
     </div>
 
-    <i-modal variant="info" v-model="showPetForm">
-      <template slot="header">Pet Information</template>
-
-      
+    <i-modal variant="info" v-model="showPetModal">
+      <template slot="header">What kind of pet are you looking for?</template>
+      <div class="_display-flex _justify-content-space-around">
+        <i-button to="/cats" variant="primary">Cat</i-button>
+        <i-button to="/dogs" variant="success">Dog</i-button>
+      </div>
     </i-modal>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'home',
   data() {
@@ -33,6 +37,9 @@ export default {
         species: null
       }
     }
+  },
+  computed: {
+    ...mapGetters(['animalCount'])
   },
   methods: {
     togglePetModal() {

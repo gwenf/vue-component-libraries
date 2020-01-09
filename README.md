@@ -31,3 +31,12 @@ Each folder in this repo represents a different UI component library for Vue.js.
 <img src="pet_info.png" alt="pet info mockup">
 
 *apply for adoption section is coming soon*
+
+## Routes
+
+* / --> Home Page/Landing Page
+* /cats
+* /dogs
+* /pet-form -> enter pet info to put up for adoption
+* /cats/:id or /dogs/:id -> view single pet information
+
